@@ -1,0 +1,225 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+
+    --fonte-principal: 'Inter';
+
+    --botao-azul-efeito: #3cf2fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+    /*
+   background-image: url("img/Background.png");  Esta utilizando a imagem como background,
+   background-repeat: no-repeat; marcado para não repetir,
+   background-size: contain; Marcado para oculpar toda a tela, uma tela
+align-items: center; alinhar os elementos no meio da coluna do grid
+text-align: center; alinha os textos
+    */
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /*
+    height: 100vh; altura da tela do dispositivo
+    display: grid; tentando separar cada elemento criado 
+    grid-template-columns: 50% 50%; divide o grid da seção que a classe contempla em colunas de 50%
+
+    */
+}
+
+.container__titulo {
+    font-size: 28px;
+    width: 700;
+}
+
+.container__image {
+    margin: 1em 0 2em 0;
+
+    /*
+    quando colocamos 4 elementos: top, rigth, lefth, bot
+    
+    */
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    /*
+    padding aumentando o espaçamento do texto ate a borda
+    display: block; faz ele oculpar o seu proprio espço inteiro, iniciando do inicio
+    text-decoration: none; tira as firulas do texto (sublinhado)
+
+    */
+
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    /*
+    o padding ja estava configurado da classe anterior
+    A diferença foi:
+    O fundo do botão transparente
+    e a borda, que agora tem espeçura maior, cor e padrão
+    */
+}
+
+.botao__telas {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+    /*
+     align-items: center; os elementos do grid estao alinhado no centro
+    */
+}
+
+.secundario__imagem {
+    width: 80%;
+    /*
+    width: 80%; Ela esta oculpando x% do seu espaço disponivel na tela
+    */
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    /*   
+     flex-direction: column;
+*/
+    justify-content: center;
+    list-style-type: none;
+
+    margin: 5em 0;
+    /*
+    Utilizando o display flex, que por padrão é row, e ajsutando eles o centro distribuido igualmente entre os elementos( da lista)
+        list-style-type: none; é o incone do inicio da lista, (por padrão vem disc, ifem, tem um mói ai, ve la)
+    margin: 5em 0; dando um espcamento top e bot
+ 
+    */
+}
+
+.dispositivos {
+    /*
+    Ele esta alinhando todos os textos que estao sobe sua classe
+    */
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+
+}
+
+.rodape {
+    /*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    Ele usou o ext align por que sao textos e não imagens,
+    se fosse outros elementos o align intens seria mais util
+    */
+    text-align: center;
+    margin: 5em 3em;
+
+}
+
+.rodape__lista {
+    display: flex;
+    
+
+
+}
+
+.lista__link {
+    text-decoration: none;
+    list-style-type: none;
+
+    margin:1em;
+}
+.rodape__texto{
+    margin: 0 2em;
+}
+
+.lista__link a:hover{
+    /*
+    efeito quando passa em cima: muda de cor
+    O elemento a dentro da lista__link
+    */
+    color: var(--cinza-secundario);
+}
+.lista__link a:active{
+    /*
+    mudar a cor enquanto esta ativo, "clicado"
+    */
+    color: purple;
+}
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+
+    /*
+    Quando passar em cima do botão ele muda de cor
+    */
+}
